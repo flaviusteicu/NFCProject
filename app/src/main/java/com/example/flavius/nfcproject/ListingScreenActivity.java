@@ -1,5 +1,6 @@
 package com.example.flavius.nfcproject;
 
+import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -40,7 +44,8 @@ public class ListingScreenActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter();
+        ArrayList<CardViewData> myList = new ArrayList<CardViewData>();
+        mAdapter = new MyAdapter(myList);
         mRecyclerView.setAdapter(mAdapter);
     }
 
