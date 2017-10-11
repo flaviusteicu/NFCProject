@@ -42,6 +42,6 @@ public class UnFragment extends DialogFragment
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Show soft keyboard automatically and request focus to field
-
     }
+
 }

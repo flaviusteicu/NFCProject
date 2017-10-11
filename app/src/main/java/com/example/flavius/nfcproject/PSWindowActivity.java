@@ -27,9 +27,6 @@ import butterknife.ButterKnife;
 
 public class PSWindowActivity extends AppCompatActivity
 {
-    @BindView(R.id.switch1)
-            Switch switchNFC;
-
     @BindView(R.id.AccessID)
             TextView textAccess;
 
@@ -105,14 +102,14 @@ public class PSWindowActivity extends AppCompatActivity
                 || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
 
 
-            if (switchNFC.isChecked())
+            /*if (switchNFC.isChecked())
             {
                 //write to a tag nfc
                 Tag nfcTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
                 try {
-/*
+*//*
                     String textToWrite = textAccess.getText().toString();
-*/
+*//*
                     String textToWrite = textAccess.getText() + NFCLogic.LINE_DELIMITER + textUsername.getText()
                             + NFCLogic.LINE_DELIMITER + textPassword.getText().toString();
                     NFCLogic.write(textToWrite, nfcTag);
@@ -142,7 +139,7 @@ public class PSWindowActivity extends AppCompatActivity
                     String textFromNfc = NFCLogic.buildTagViews(msgs);
                     ReadingTheData(textFromNfc);
                 }
-            }
+            }*/
         }
     }
 
